@@ -15,6 +15,15 @@ export default {
   name: 'App',
   components: {
       Navbar,
+  },
+  beforeCreate() {
+    this.$store.commit('initializeStore')
+
+    if (this.$store.state.token){
+      axios.default.header.common['Authorization'] = "Token " + this.$store.state.token
+    } else {
+      axios.default.header.common['Authorization'] = ""
+    }
   }
 }
 </script>
