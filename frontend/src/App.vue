@@ -9,7 +9,9 @@
 </template>
 
 <script>
+import axios from 'axios';
 import Navbar from '@/components/layout/Navbar.vue';
+
 
 export default {
   name: 'App',
@@ -20,9 +22,9 @@ export default {
     this.$store.commit('initializeStore')
 
     if (this.$store.state.token){
-      axios.default.header.common['Authorization'] = "Token " + this.$store.state.token
+      axios.defaults.headers.common['Authorization'] = "Token " + this.$store.state.token
     } else {
-      axios.default.header.common['Authorization'] = ""
+      axios.defaults.headers.common['Authorization'] = ""
     }
   }
 }
