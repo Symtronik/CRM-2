@@ -82,7 +82,7 @@ export default {
             }
 
             axios
-                .post('/api/v1/users/', formData)
+                .post('/api/v1/users', formData)
                 .then(response => {
                     toast({
                         message: 'Account was created, please log in',
