@@ -52,23 +52,27 @@
                     <div class="field">
                         <label>Status</label>
                         <div class="control">
-                            <select class="select" v-model="status">
-                                <option value="new">New</option>
-                                <option value="contacted">Contacted</option>
-                                <option value="inprogress">In progress</option>
-                                <option value="lost">Lost</option>
-                                <option value="won">Won</option>
-                            </select>
+                            <div class="select">
+                                <select  v-model="status">
+                                    <option value="new">New</option>
+                                    <option value="contacted">Contacted</option>
+                                    <option value="inprogress">In progress</option>
+                                    <option value="lost">Lost</option>
+                                    <option value="won">Won</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                     <div class="field">
                         <label>Priority</label>
                         <div class="control">
-                            <select class="select" v-model="priority">
-                                <option value="low">Low</option>
-                                <option value="medium">Medium</option>
-                                <option value="high">High</option>
-                            </select>
+                            <div class="select">
+                                <select  v-model="priority">
+                                    <option value="low">Low</option>
+                                    <option value="medium">Medium</option>
+                                    <option value="high">High</option>
+                                </select>
+                            </div>
                         </div>
                     </div>
                     <div class="field">
