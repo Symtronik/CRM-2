@@ -4,7 +4,7 @@
             <div class="column is-12">
                 <h1 class="title">{{ lead.company }} </h1>  
                 
-                <router-link to="/" class="button is-light">Edit</router-link>
+                <router-link :to="{ name: 'EditLead', params: { id: lead.id }}" class="button is-light">Edit</router-link>
             </div>
         
         
