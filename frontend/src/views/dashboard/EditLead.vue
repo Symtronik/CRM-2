@@ -88,6 +88,8 @@
 <script>
 import axios from 'axios';
 
+import { toast } from 'bulma-toast'
+
 export default {
     name: 'EditLead',
     data() {
@@ -125,6 +127,15 @@ export default {
             axios
                 .patch(`/api/v1/leads/${leadId}/`, this.lead)
                 .then(response => {
+                    toast({
+                        message: 'The lead was updated',
+                        type: 'is-success',
+                        dimissible: true,
+                        pauseOnHover: true,
+                        duration: 2000,
+                        position: 'bottom-right',
+                    })
+
                     this.$router.push(`/dashboard/leads/${leadId}`)
                 })
                 .catch(error => {
