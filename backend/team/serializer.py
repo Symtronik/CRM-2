@@ -3,8 +3,8 @@ from rest_framework import serializers
 from .models import Team
 
 
-class UserSerlializer(serializers.ModelSerializer):
-    class Meta:(
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
         model = User
         fields = (
             "id",
@@ -12,10 +12,10 @@ class UserSerlializer(serializers.ModelSerializer):
             "first_name",
             "last_name",
         )
-    )
+    
 
-class TeamSerlializer(serializers.ModelSerializer):
-    members = UserSerlializer(many=True, read_only=True)
+class TeamSerializer(serializers.ModelSerializer):
+    members = UserSerializer(many=True, read_only=True)
 
     class Meta:
         model = Team

@@ -1,9 +1,9 @@
 from rest_framework import viewsets
 from .models import Team
-from .serializers import TeamSerlializer
+from .serializer import TeamSerializer
 
 class TeamViewSet(viewsets.ModelViewSet):
-    serializers_class = TeamSerlializer
+    serializers_class = TeamSerializer
     queryset = Team.objects.all()
 
     def get_queryset(self):
