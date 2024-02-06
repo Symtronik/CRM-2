@@ -46,7 +46,7 @@
                     <div class="field">
                         <label>Estimated value</label>
                         <div class="control">
-                            <input type="number"  class="input" v-model="estimeted_value">
+                            <input type="number"  class="input" v-model="estimated_value">
                         </div>
                     </div>
                     <div class="field">
@@ -96,7 +96,7 @@ export default {
             contact_person: '',
             email: '',
             phone: '',
-            estimeted_value: 0,
+            estimated_value: 0,
             confidence: 0,
             website: '',
             status: 'new',
@@ -113,7 +113,7 @@ export default {
                 contact_person: this.contact_person,
                 email: this.email,
                 phone: this.phone,
-                estimeted_value: this.estimeted_value,
+                estimated_value: this.estimated_value,
                 confidence: this.confidence,
                 website: this.website,
                 status: this.status,
